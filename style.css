@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Red Hat Display", "Segoe UI", Arial, sans-serif;
+  background: #1b2a6b url("images/pattern-background-desktop.svg") no-repeat center / cover;
+  min-height: 100vh;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 50px rgba(30, 40, 100, 0.25);
+}
+
+.hero-img { display: block; width: 100%; height: 200px; object-fit: cover; }
+.content { padding: 40px; }
+.heading { font-size: 28px; font-weight: 900; color: #1f2d5a; margin-bottom: 16px; }
+
+.summary-para { font-size: 15px; line-height: 1.5; color: #7d849c; margin-bottom: 24px; }
+
+.plan { display: flex; align-items: center; gap: 16px; background: #f0f3ff; border-radius: 12px; padding: 16px; margin-bottom: 24px; }
+.plan-icon { width: 48px; height: 48px; flex-shrink: 0; }
+.plan-details { flex: 1; display: flex; justify-content: space-between; align-items: center; }
+.plan-text h3 { font-weight: 700; color: #1f2d5a; font-size: 16px; }
+.plan-text p { color: #7d849c; font-size: 14px; margin-top: 2px; }
+
+.change-link a { color: #5b4fe0; font-weight: 700; font-size: 14px; text-decoration: underline; }
+.change-link a:hover { color: #3a30b0; }
+
+.proceed-btn {
+  display: block; width: 100%; padding: 16px;
+  background: #5b4fe0; color: #fff; border: none; border-radius: 10px;
+  font: inherit; font-weight: 700; font-size: 16px; cursor: pointer;
+  box-shadow: 0 10px 20px rgba(91, 79, 224, 0.3);
+  transition: background-color 0.2s;
+}
+.proceed-btn:hover { background: #3a30b0; }
+
+.cancel-order {
+  display: block; text-align: center; margin-top: 20px;
+  color: #9aa0b8; font-weight: 700; text-decoration: none; transition: color 0.2s;
+}
+.cancel-order:hover { color: #e03e4f; }
+
+.proceed-btn:focus-visible, .cancel-order:focus-visible, .change-link a:focus-visible, .footer a:focus-visible {
+  outline: 3px solid #ffb703; outline-offset: 3px;
+}
+
+.footer { margin-top: 24px; font-size: 13px; color: #fff; text-align: center; }
+.footer a { color: #ffd166; font-weight: 700; }
+
+@media (max-width: 450px) {
+  body { background-image: url("images/pattern-background-mobile.svg"); }
+  .main { justify-content: flex-start; padding-top: 48px; }
+  .content { padding: 28px 20px; }
+  .hero-img { display: block; width: 100%; height: 200px; object-fit: cover; }
+.content { padding: 40px; }
+.heading { font-size: 24px; }
+}
